@@ -1,33 +1,34 @@
-📸 Face Recognition Attendance System
-        A Python-based attendance system that uses face recognition to mark student attendance. It captures faces in real-time using OpenCV and logs attendance only during defined time slots (e.g., morning 9–9:30 AM, evening till 4:20 PM). Built with a GUI for easy usage in educational institutions like colleges.
+# 📸 Face Recognition Attendance System
 
-    ✅ Features
-        🔍 Real-time face detection and recognition using webcam
+A Python-based attendance system that uses face recognition to mark student attendance. It captures faces in real-time using OpenCV and logs attendance **only during defined time slots** (e.g., **morning 9:00–9:30 AM**, **evening till 4:20 PM**). Built with a GUI for easy use in educational institutions like colleges.
 
-        🧠 Built using face_recognition, OpenCV, Tkinter
+---
 
-        ⏰ Time-based attendance (e.g., 9–9:30 AM and after 6 hours minimum)
+## ✅ Features
 
-        📁 Attendance logged into a .csv file
+- 🔍 Real-time face detection and recognition using webcam  
+- 🧠 Built using `face_recognition`, `OpenCV`, `Tkinter`  
+- ⏰ Time-based attendance (e.g., 9–9:30 AM and after 6 hours minimum)  
+- 📁 Attendance logged into a `.csv` file  
+- 🖼️ Automatically loads known faces from `images/` folder  
+- 🖥️ Simple GUI with `Start` button  
+- 🛑 Automatically exits after marking or skipping attendance  
+- 🔄 Prevents duplicate attendance within the time window  
 
-        🖼️ Automatically loads known faces from images/ folder
+---
 
-        🖥️ Simple GUI with Start button
+## 📁 Project Structure
 
-        🛑 Automatically exits after marking or skipping attendance
+```bash
+face-attendance/
+├── images/             # Folder with known face images
+├── attendance.csv      # Log file for storing attendance data
+├── main.py             # Backend logic (face recognition + logging)
+├── gui_attendance.py   # GUI interface for launching attendance
+└── README.md           # Project documentation
 
-        🧠 Prevents duplicate attendance within time window
+```
 
-
-    '''
-    face-attendance/
-│
-├── images/                # Folder with known face images
-├── attendance.csv         # Log file for storing attendance data
-├── main.py                # Backend logic (Face recognition + logging)
-├── gui_attendance.py      # GUI interface for launching attendance
-└── README.md              # Project documentation
-    '''
 
 🛠️ Tech Stack
         Python 3.12+
@@ -39,31 +40,41 @@
         NumPy, Pandas
 
         Tkinter (for GUI)
+
 ⚙️ How It Works
-        Load known face encodings from the images/ folder
+        Loads known face encodings from the images/ folder
 
-        Open webcam and detect face using face_recognition
+        Opens webcam and detects faces using face_recognition
 
-        Compare with known encodings
+        Compares captured face with known encodings
 
-        If matched, check if attendance can be marked (based on time logic)
+        If matched:
 
-        Log name and time to attendance.csv
+        Verifies if the attendance window is valid
 
-        GUI allows the user to start process with a single button click
+        Logs name and timestamp into attendance.csv
 
-🏫 Use Case
-        Designed for college classroom or lab attendance. Only allows valid entries during:
+        GUI allows launching attendance with a single button click
+
+        Automatically prevents re-entry within the same slot
+
+        🏫 Use Case
+        Designed specifically for college classrooms or lab attendance.
+        Only allows attendance marking during:
 
         🕘 Morning Slot: 9:00 AM – 9:30 AM
 
-        🕓 Evening Slot: After 6-hour gap, till 4:20 PM
+        🕓 Evening Slot: After a minimum 6-hour gap, up to 4:20 PM
+
 💡 Future Improvements
         Add admin login for attendance control
 
         Generate PDF reports
 
-        Auto email or WhatsApp notifications
+        Enable auto email or WhatsApp notifications
 
-        Integrate database for persistent storage
+        Integrate with a database (MongoDB/PostgreSQL) for persistent storage
 
+👨‍💻 Developed By
+Uttej Kumar – B.Tech CSE
+(uttej-git)
