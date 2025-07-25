@@ -28,8 +28,6 @@ face-attendance/
 └── README.md           # Project documentation
 
 ```
-
-
 🛠️ Tech Stack
         Python 3.12+
 
