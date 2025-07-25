@@ -3,7 +3,6 @@
 A Python-based attendance system that uses face recognition to mark student attendance. It captures faces in real-time using OpenCV and logs attendance **only during defined time slots** (e.g., **morning 9:00–9:30 AM**, **evening till 4:20 PM**). Built with a GUI for easy use in educational institutions like colleges.
 
 ---
-
 ## ✅ Features
 
 - 🔍 Real-time face detection and recognition using webcam  
@@ -16,9 +15,7 @@ A Python-based attendance system that uses face recognition to mark student atte
 - 🔄 Prevents duplicate attendance within the time window  
 
 ---
-
 ## 📁 Project Structure
-
 ```bash
 face-attendance/
 ├── images/             # Folder with known face images
