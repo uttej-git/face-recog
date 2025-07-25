@@ -30,16 +30,6 @@ face-attendance/
 ```
 
 
-🛠️ Tech Stack
-        Python 3.12+
-
-        OpenCV
-
-        face_recognition
-
-        NumPy, Pandas
-
-        Tkinter (for GUI)
 
 ⚙️ How It Works
         Loads known face encodings from the images/ folder
